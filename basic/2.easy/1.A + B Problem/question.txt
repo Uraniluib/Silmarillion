@@ -1,0 +1,10 @@
+Write a function that add two numbers A and B.
+
+## 1.1 Example 
+Given a=1 and b=2 return 3.
+
+## 1.2 Challenge
+Of course you can just return a + b to get accepted. But Can you challenge not do it like that?(You should not use + or any arithmetic operators.)
+
+## 1.3 KeyKnowledge
+在计算机中，数字是以补码的形式存在的，计算也是用补码来进行计算，计算后的结果也是补码，可以参考[图解 Java 位运算][1]。

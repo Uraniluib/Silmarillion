@@ -1,7 +1,0 @@
-/**
- * Reverse a 3-digit integer.
- *
- * Example
- * Reverse 123 you will get 321.
- * Reverse 900 you will get 9.
- */

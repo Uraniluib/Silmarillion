@@ -1,23 +1,35 @@
+/**
+ * Definition for ListNode
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+
 public class Solution {
     /**
-     * @param n: an integer
-     * @return: an ineger f(n)
+     * @param head: a ListNode
+     * @param val: An integer
+     * @return: a ListNode
      */
-    public int fibonacci(int n) {
-        //return fibonacci(n-1) + fibonacci(n-2);
-        int n1 = 0, n2 = 1, n3 = 1;
+    public ListNode removeElements(ListNode head, int val) {
         // write your code here
-        if(n==1){
-            return n1;
+        ListNode current = new ListNode(-1);
+        ListNode previous = current;
+        current.next = head;
+        while(previous.next != null){
+            if(previous.next.val == val){
+                ListNode temp = previous.next;
+                previous.next = temp.next;
+                temp.next = null;
+            }
+            else
+                previous = previous.next;
         }
-        if(n==2){
-            return n2;
-        }
-        for(int i = 0; i < n-2; i++){
-            n3 = n1 + n2;
-            n1 = n2;
-            n2 = n3;
-        }
-        return n3;
+        return current.next;
     }
 }

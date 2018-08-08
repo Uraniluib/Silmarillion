@@ -1,15 +1,27 @@
+"""
+Definition of ListNode
+class ListNode(object):
+    def __init__(self, val, next=None):
+        self.val = val
+        self.next = next
+"""
+
 class Solution:
     """
-    @param n: an integer
-    @return: an ineger f(n)
+    @param head: a ListNode
+    @param val: An integer
+    @return: a ListNode
     """
-    def fibonacci(self, n):
+    def removeElements(self, head, val):
         # write your code here
-        f = [0,1]
-        if n == 1:
-            return f[0]
-        if n == 2:
-            return f[1]
-        for i in range(2,n):
-            f.append(f[i-1]+f[i-2])
-        return f[-1]
+        origin = ListNode(-1)
+        previous = origin
+        origin.next = head
+        while(previous.next):
+            if previous.next.val == val:
+                temp = previous.next
+                previous.next = temp.next
+                temp.next = None
+            else:
+                previous = previous.next
+        return origin.next

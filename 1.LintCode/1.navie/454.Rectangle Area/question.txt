@@ -1,0 +1,63 @@
+454. Rectangle Area
+Implement a Rectangle class which include the following attributes and methods:
+
+Two public attributes width and height.
+A constructor which expects two parameters width and height of type int.
+A method getArea which would calculate the size of the rectangle and return.
+Example
+Java:
+    Rectangle rec = new Rectangle(3, 4);
+    rec.getArea(); // should get 12
+
+Python:
+    rec = Rectangle(3, 4)
+    rec.getArea()
+	
+————————————
+	
+Wrong Answer
+19%
+19% test cases passedTotal runtime 50 ms
+what's wrong? Subscribe the TA service to get professional guidance while coding
+Input
+5->null
+1
+Output
+null
+Expected
+5->null
+Compile Warning
+Using config file /etc/pylintrc
+Hint
+Review your code and make sure your algorithm is correct. Wrong answer usually caused by typos if your algorithm is correct.
+
+Solution:
+In java, forget to write 
+else
+    previous = previous.next;
+In python, write wrong if
+if previous.val == val:
+    temp = previous.next
+(at first use !=)
+
+
+——————————————————
+Wrong Answer
+6%
+6% test cases passedTotal runtime 50 ms
+what's wrong? Subscribe the TA service to get professional guidance while coding
+Input
+1->1->null
+1
+Output
+1->null
+Expected
+null
+Compile Warning
+Using config file /etc/pylintrc
+Hint
+Review your code and make sure your algorithm is correct. Wrong answer usually caused by typos if your algorithm is correct.
+
+Solution:
+forget to add previous.next.val == val
+only use previous.val, then it only test current node not next node

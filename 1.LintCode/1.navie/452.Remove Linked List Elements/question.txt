@@ -3,3 +3,53 @@ Remove all elements from a linked list of integers that have value val.
 
 Example
 Given 1->2->3->3->4->5->3, val = 3, you should return the list as 1->2->4->5
+
+
+————————————
+	
+Wrong Answer
+19%
+19% test cases passedTotal runtime 50 ms
+what's wrong? Subscribe the TA service to get professional guidance while coding
+Input
+5->null
+1
+Output
+null
+Expected
+5->null
+Compile Warning
+Using config file /etc/pylintrc
+Hint
+Review your code and make sure your algorithm is correct. Wrong answer usually caused by typos if your algorithm is correct.
+
+Solution:
+In java, forget to write 
+else
+    previous = previous.next;
+In python, write wrong if
+if previous.val == val:
+    temp = previous.next
+(at first use !=)
+
+
+——————————————————
+Wrong Answer
+6%
+6% test cases passedTotal runtime 50 ms
+what's wrong? Subscribe the TA service to get professional guidance while coding
+Input
+1->1->null
+1
+Output
+1->null
+Expected
+null
+Compile Warning
+Using config file /etc/pylintrc
+Hint
+Review your code and make sure your algorithm is correct. Wrong answer usually caused by typos if your algorithm is correct.
+
+Solution:
+forget to add previous.next.val == val
+only use previous.val, then it only test current node not next node

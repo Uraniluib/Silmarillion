@@ -1,0 +1,16 @@
+632. Binary Tree Maximum Node
+Find the maximum node in a binary tree, return the node.
+
+Example
+Given a binary tree:
+
+     1
+   /   \
+ -5     2
+ / \   /  \
+0   3 -4  -5 
+return the node with value 3.
+
+注意python的pop函数
+注意python里用None，java用null
+注意java的empty要nodeS.empty() != true

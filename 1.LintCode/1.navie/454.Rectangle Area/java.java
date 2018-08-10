@@ -1,23 +1,26 @@
-public class Solution {
-    /**
-     * @param n: an integer
-     * @return: an ineger f(n)
+public class Rectangle {
+    /*
+     * Define two public attributes width and height of type int.
      */
-    public int fibonacci(int n) {
-        //return fibonacci(n-1) + fibonacci(n-2);
-        int n1 = 0, n2 = 1, n3 = 1;
-        // write your code here
-        if(n==1){
-            return n1;
-        }
-        if(n==2){
-            return n2;
-        }
-        for(int i = 0; i < n-2; i++){
-            n3 = n1 + n2;
-            n1 = n2;
-            n2 = n3;
-        }
-        return n3;
+    // write your code here
+    public int width = 0;
+    public int height = 0;
+
+    /*
+     * Define a constructor which expects two parameters width and height here.
+     */
+    // write your code here
+    public Rectangle(int w, int h){
+        this.width = w;
+        this.height = h;
+    }
+    
+    /*
+     * Define a public method `getArea` which can calculate the area of the
+     * rectangle and return.
+     */
+    // write your code here
+    public int getArea(){
+        return this.width * this.height;   
     }
 }

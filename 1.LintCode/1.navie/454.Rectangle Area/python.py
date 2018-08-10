@@ -1,15 +1,17 @@
-class Solution:
-    """
-    @param n: an integer
-    @return: an ineger f(n)
-    """
-    def fibonacci(self, n):
-        # write your code here
-        f = [0,1]
-        if n == 1:
-            return f[0]
-        if n == 2:
-            return f[1]
-        for i in range(2,n):
-            f.append(f[i-1]+f[i-2])
-        return f[-1]
+class Rectangle:
+
+    '''
+     * Define a constructor which expects two parameters width and height here.
+    '''
+    # write your code here
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+    
+    '''
+     * Define a public method `getArea` which can calculate the area of the
+     * rectangle and return.
+    '''
+    # write your code here
+    def getArea(self):
+        return self.width * self.height
